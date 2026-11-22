@@ -7,7 +7,7 @@
 const state = {
   currentLang: 'ua',
   selectedMemory: '128',
-  basePrice128: 23000,
+  basePrice128: 15999,
   oldPrice128: 24999,
   basePrice512: 30999,
   oldPrice512: 33499,
@@ -38,7 +38,7 @@ const translations = {
     breadcrumbCat: 'Віртуальна реальність',
     breadcrumbMeta: 'Шоломи Meta',
     badgeHit: 'Хіт продажу',
-    badgeSale: 'Знижка -8%',
+    badgeSale: 'Знижка -36%',
     badgeOfficial: 'Офіційна гарантія 12 міс',
     productTitle128: 'Шолом віртуальної реальності Meta Quest 3 128 GB (899-00583-01)',
     productTitle512: 'Шолом віртуальної реальності Meta Quest 3 512 GB (899-00584-01)',
@@ -47,7 +47,7 @@ const translations = {
     memoryLabel: 'Вбудована пам\'ять:',
     buyBtn: 'Купити',
     oneClickBtn: 'Купити в 1 клік',
-    installmentBtn: 'Оплата частинами від 2 300 ₴/міс',
+    installmentBtn: 'Оплата частинами від 1 600 ₴/міс',
     toastAdded: 'Товар успішно додано до кошика!',
     toastFavAdd: 'Додано в список обраного',
     toastFavRem: 'Видалено зі списку обраного'
@@ -76,7 +76,7 @@ const translations = {
     memoryLabel: 'Встроенная память:',
     buyBtn: 'Купить',
     oneClickBtn: 'Купить в 1 клик',
-    installmentBtn: 'Оплата частями от 2 300 ₴/мес',
+    installmentBtn: 'Оплата частями от 1 600 ₴/мес',
     toastAdded: 'Товар успешно добавлен в корзину!',
     toastFavAdd: 'Добавлено в список избранного',
     toastFavRem: 'Удалено из списка избранного'
@@ -150,11 +150,11 @@ function initMemorySelector() {
       state.selectedMemory = mem;
 
       if (mem === '128') {
-        currentPriceEl.innerHTML = `23 000 <span>₴</span>`;
+        currentPriceEl.innerHTML = `15 999 <span>₴</span>`;
         oldPriceEl.textContent = '24 999 ₴';
-        discountSavingEl.textContent = 'Економія 1 999 ₴ (-8%)';
+        discountSavingEl.textContent = 'Економія 9 000 ₴ (-36%)';
         titleEl.textContent = translations[state.currentLang].productTitle128;
-        if (installmentText) installmentText.textContent = 'Оплата частинами від 2 300 ₴/міс';
+        if (installmentText) installmentText.textContent = 'Оплата частинами від 1 600 ₴/міс';
       } else {
         currentPriceEl.innerHTML = `30 999 <span>₴</span>`;
         oldPriceEl.textContent = '33 499 ₴';
